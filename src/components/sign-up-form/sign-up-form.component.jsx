@@ -20,9 +20,9 @@ export default function SignUpForm() {
     const [formFields, setFormFields] = useState(defaultFormFields);
     const { displayName, email, password, confirmPassword } = formFields;
 
-    console.log('hit')
+    // console.log('hit')
 
-    console.log(formFields)
+    // console.log(formFields)
 
     function resetFormFields() {
         setFormFields(defaultFormFields)
