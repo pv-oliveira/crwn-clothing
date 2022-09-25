@@ -2,6 +2,7 @@ import { useState } from "react"
 
 import FormInput from "../form-input/form-input.component"
 
+//eslint-disable-next-line
 import { createUserDocumentFromAuth, signInAuthUserWithEmailAndPassword, signInWithGooglePopup } from "../../utils/firebase/firebase.utils"
 
 import './sign-in-form.styles.scss'
@@ -25,6 +26,7 @@ export default function SignInForm() {
         event.preventDefault();
 
         try {
+            //eslint-disable-next-line
             const { user } = await signInAuthUserWithEmailAndPassword(email, password)
             // console.log(response)
             resetFormFields();

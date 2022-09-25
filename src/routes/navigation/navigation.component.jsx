@@ -21,7 +21,7 @@ import {
 import "./navigation.styles.jsx";
 
 export default function Navigation() {
-   const currentUser = useSelector(selectCurrentUser)
+   const currentUser = useSelector(selectCurrentUser);
     const { isCartOpen } = useContext(CartContext);
 
   return (
