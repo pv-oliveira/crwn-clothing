@@ -7,12 +7,17 @@ export const ProductCartContainer = styled.div`
   height: 350px;
   align-items: center;
   position: relative;
-
+  @media screen and (max-width: 450px) {
+    padding: 20px;
+  } 
   img {
     width: 100%;
     height: 95%;
     object-fit: cover;
     margin-bottom: 5px;
+    @media screen and (max-width: 450px) {
+    width: 300px;
+  } 
   }
 
   button {
@@ -35,12 +40,14 @@ export const ProductCartContainer = styled.div`
   }
 `;
 
-export const Footer = styled.div`
+export const Footer = styled.footer`
   width: 100%;
   height: 5%;
   display: flex;
   justify-content: space-between;
   font-size: 18px;
+
+
 `;
 
 export const Name = styled.span`
