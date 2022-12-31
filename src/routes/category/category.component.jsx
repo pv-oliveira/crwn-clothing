@@ -1,32 +1,42 @@
-import { useState, useEffect, Fragment } from "react";
-import { useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
-import ProductCard from "../../components/product-card/product-card.component";
+import { useState, useEffect, Fragment } from 'react';
+import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 
-import { categorySelector } from "../../store/categories/category.selector";
+import ProductCard from '../../components/product-card/product-card.component';
+import Spinner from '../../components/spinner/spinner.components';
 
-import "./category.styles.scss";
+import {
+  selectCategoriesMap,
+  selectIsLoading,
+} from '../../store/categories/category.selector';
 
-export default function Category() {
+import { CategoryContainer, Title } from './category.styles';
+
+const Category = () => {
   const { category } = useParams();
-  console.log("render/re-rendering category component");
-  const categoriesMap = useSelector(categorySelector);
+  const categoriesMap = useSelector(selectCategoriesMap);
+  const isLoading = useSelector(selectIsLoading);
   const [products, setProducts] = useState(categoriesMap[category]);
 
   useEffect(() => {
-    console.log('effect fired calling setProducts')
     setProducts(categoriesMap[category]);
   }, [category, categoriesMap]);
 
   return (
     <Fragment>
-      <h2 className="category-title">{category.toUpperCase()}</h2>
-      <div className="category-container">
-        {products &&
-          products.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-      </div>
+      <Title>{category.toUpperCase()}</Title>
+      {isLoading ? (
+        <Spinner />
+      ) : (
+        <CategoryContainer>
+          {products &&
+            products.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+        </CategoryContainer>
+      )}
     </Fragment>
   );
-}
+};
+
+export default Category;

@@ -1,22 +1,22 @@
-import './categories-preview.styles.scss'
+import "./categories-preview.styles.scss";
 
-import { Fragment } from "react"
-import { useSelector } from 'react-redux';
+import { Fragment } from "react";
+import { useSelector } from "react-redux";
 
-import CategoryPreview from "../../components/category-preview/category-preview.component"
-import { categorySelector } from '../../store/categories/category.selector';
+import CategoryPreview from "../../components/category-preview/category-preview.component";
+import { selectCategoriesMap } from "../../store/categories/category.selector";
 
 export default function CategoriesPreview() {
-    const categoriesMap = useSelector(categorySelector)
+  const categoriesMap = useSelector(selectCategoriesMap);
 
-    return (
-        <Fragment>
-            {Object.keys(categoriesMap).map(title => {
-                const products = categoriesMap[title];
-                return (
-                    <CategoryPreview key={title} title={title} products={products} />
-                )
-            })}
-        </Fragment>
-    )
+  return (
+    <Fragment>
+      {Object.keys(categoriesMap).map((title) => {
+        const products = categoriesMap[title];
+        return (
+          <CategoryPreview key={title} title={title} products={products} />
+        );
+      })}
+    </Fragment>
+  );
 }
