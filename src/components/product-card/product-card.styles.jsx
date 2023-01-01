@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const ProductCartContainer = styled.div`
   width: 100%;
@@ -9,15 +9,16 @@ export const ProductCartContainer = styled.div`
   position: relative;
   @media screen and (max-width: 450px) {
     padding: 20px;
-  } 
+  }
   img {
     width: 100%;
     height: 95%;
     object-fit: cover;
     margin-bottom: 5px;
+
     @media screen and (max-width: 450px) {
-    width: 300px;
-  } 
+      width: 33vh;
+    }
   }
 
   button {
@@ -46,8 +47,6 @@ export const Footer = styled.footer`
   display: flex;
   justify-content: space-between;
   font-size: 18px;
-
-
 `;
 
 export const Name = styled.span`
