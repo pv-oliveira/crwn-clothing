@@ -25,10 +25,10 @@ export default function CartDropdown() {
         {cartItems.length ? (
           cartItems.map((item) => <CartItem key={item.id} cartItem={item} />)
         ) : (
-          <EmptyMessage>Yor cart is empty</EmptyMessage>
+          <EmptyMessage>Seu carrinho está vazio</EmptyMessage>
         )}
       </CartItems>
-      <Button onClick={goToCheckoutHandler}>GO TO CHECKOUT</Button>
+      <Button onClick={goToCheckoutHandler}>IR PARA O CARRINHO</Button>
     </CartDropdownContainer>
   );
 }

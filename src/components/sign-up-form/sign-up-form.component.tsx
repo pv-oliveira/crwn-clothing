@@ -53,11 +53,11 @@ export default function SignUpForm() {
 
   return (
     <SignUpContainer>
-      <h2>Don't have an account?</h2>
-      <span>Sign up with your email and password</span>
+      <h2>Não possui conta?</h2>
+      <span>Se cadastre com seu email e senha</span>
       <form onSubmit={handleSubmit}>
         <FormInput
-          label="Display Name"
+          label="Nome"
           type="text"
           required
           onChange={handleChange}
@@ -75,7 +75,7 @@ export default function SignUpForm() {
         />
 
         <FormInput
-          label="Password"
+          label="Senha"
           type="password"
           required
           onChange={handleChange}
@@ -84,14 +84,14 @@ export default function SignUpForm() {
         />
 
         <FormInput
-          label="Confirm Password"
+          label="Confirma Senha"
           type="password"
           required
           onChange={handleChange}
           name="confirmPassword"
           value={confirmPassword}
         />
-        <Button type="submit">Sign Up</Button>
+        <Button type="submit">Cadastrar</Button>
       </form>
     </SignUpContainer>
   );

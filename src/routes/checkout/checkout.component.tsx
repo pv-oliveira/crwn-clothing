@@ -23,19 +23,19 @@ export default function Checkout() {
     <CheckoutContainer>
       <CheckoutHeader>
         <HeaderBlock>
-          <span>Product</span>
+          <span>Produto</span>
         </HeaderBlock>
         <HeaderBlock>
-          <span>Description</span>
+          <span>Descrição</span>
         </HeaderBlock>
         <HeaderBlock>
-          <span>Quantity</span>
+          <span>Quantidade</span>
         </HeaderBlock>
         <HeaderBlock>
-          <span>Price</span>
+          <span>Preço</span>
         </HeaderBlock>
         <HeaderBlock>
-          <span>Remove</span>
+          <span>Remover</span>
         </HeaderBlock>
       </CheckoutHeader>
       {cartItems.map((cartItem) => (

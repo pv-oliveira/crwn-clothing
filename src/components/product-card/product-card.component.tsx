@@ -35,7 +35,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         buttonType={BUTTON_TYPE_CLASSES.inverted}
         onClick={addProductToCart}
       >
-        Add to cart
+        Adicionar ao carrinho
       </Button>
     </ProductCartContainer>
   );

@@ -29,6 +29,7 @@ export const categoriesReducer = (
   }
 
   if (fetchCategoriesSuccess.match(action)) {
+    console.log(action.payload)
     return { ...state, categories: action.payload, isLoading: false };
   }
 

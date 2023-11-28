@@ -5,6 +5,8 @@ import {
   withMatcher,
 } from "../../utils/reducer/reducer.utils";
 
+import SHOP_DATA from "../../shop-data";
+
 import { CATEGORIES_ACTION_TYPES, Category } from "./category.types";
 
 export type FetchCategoriesStart =
@@ -28,7 +30,7 @@ export const fetchCategoriesSuccess = withMatcher(
   (categoriesArray: Category[]) =>
     createAction(
       CATEGORIES_ACTION_TYPES.FETCH_CATEGORIES_SUCCESS,
-      categoriesArray
+      SHOP_DATA
     )
 );
 

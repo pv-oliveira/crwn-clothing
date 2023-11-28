@@ -9,7 +9,8 @@ import { signOutStart } from "../../store/user/user.action";
 import CartIcon from "../../components/cart-icon/cart-icon.component";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
 
-import { ReactComponent as CrwnLogo } from "../../assets/crown.svg";
+// import { ReactComponent as CrwnLogo } from "../../assets/crown.svg";
+import NatoLogo  from "../../assets/img/nato/LOGO-rosa.png";
 
 import {
   NavigationContainer,
@@ -29,16 +30,17 @@ export default function Navigation() {
     <Fragment>
       <NavigationContainer className="navigation">
         <LogoContainer to="/">
-          <CrwnLogo className="logo" />
+          <img src={NatoLogo} alt="logo-nato" className="logo" />
+          {/* <NatoLogo className="logo" /> */}
         </LogoContainer>
         <NavLinks>
-          <NavLink to="/shop">SHOP</NavLink>
+          {/* <NavLink to="/shop">SHOP</NavLink> */}
           {currentUser ? (
             <NavLink as="span" onClick={signOutUser}>
-              SIGN OUT
+              SAIR DA CONTA
             </NavLink>
           ) : (
-            <NavLink to="/auth">SIGN IN</NavLink>
+            <NavLink to="/auth">ENTRAR NA CONTA</NavLink>
           )}
           <CartIcon />
         </NavLinks>

@@ -38,6 +38,7 @@ p {
 `
 
 export const DirectoryItemContainer = styled.div`
+border-radius: 15px;
 min-width: 30%;
 height: 240px;
 flex: 1 1 auto;

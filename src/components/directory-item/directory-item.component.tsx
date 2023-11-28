@@ -23,7 +23,7 @@ const DirectoryItem: React.FC<DirectoryItemProps> = ({ category }) => {
       <Body>
         {/* <img/> */}
         <h2>{title}</h2>
-        <p>Shop Now</p>
+        <p>Comprar Agora</p>
       </Body>
     </DirectoryItemContainer>
   );
