@@ -7,6 +7,7 @@ import {
 
 import CheckoutItem from "../../components/checkout-item/checkout-item.component";
 import PaymentForm from "../../components/payment-form/payment-form.components";
+import Schedule from "../../components/schedule/schedule.component";
 
 import {
   CheckoutContainer,
@@ -41,6 +42,7 @@ export default function Checkout() {
       {cartItems.map((cartItem) => (
         <CheckoutItem key={cartItem.id} cartItem={cartItem} />
       ))}
+      <Schedule />
       <Total>Total: ${cartTotal}</Total>
       <PaymentForm />
     </CheckoutContainer>
