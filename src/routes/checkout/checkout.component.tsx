@@ -42,7 +42,9 @@ export default function Checkout() {
       {cartItems.map((cartItem) => (
         <CheckoutItem key={cartItem.id} cartItem={cartItem} />
       ))}
-      <Schedule />
+      {
+        cartItems.length > 0 ? <Schedule /> : null
+      }
       <Total>Total: ${cartTotal}</Total>
       <PaymentForm />
     </CheckoutContainer>

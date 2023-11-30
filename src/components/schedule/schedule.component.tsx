@@ -43,7 +43,7 @@ const Schedule = () => {
                     type === 'agendar' ? 
                     <FormInput
                         label=''
-                        type='date'
+                        type='datetime-local'
                         onChange={handleChange}
                         name='hour'
                         value={hour}
